@@ -1,2 +1,6 @@
 git clone --depth 1 --branch jenkins-docker-packaging-2.235.1 https://github.com/jenkinsci/docker.git
 docker build -t vikvo11/k8sjenkins .
+
+docker run -d -p 8080:8080 -p 50000:50000 vikvo11/k8sjenkins:latest
+
+https://stackoverflow.com/questions/41111976/why-cant-docker-commit-a-jenkins-container-with-customized-configuration
