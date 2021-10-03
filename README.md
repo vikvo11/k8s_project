@@ -19,3 +19,4 @@ docker push vikvo11/k8sjenkins:tagname
 
 docker container rm e5e0dd0bcfbf -f
 
+docker run -d -v jenkins_home:/var/jenkins_home -p 8080:8080 -p 50000:50000 vikvo11/k8sjenkins:latest
