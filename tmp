@@ -9,7 +9,7 @@ https://stackoverflow.com/questions/41111976/why-cant-docker-commit-a-jenkins-co
 
 https://stackoverflow.com/questions/46860485/can-i-move-docker-container-that-includes-jenkins-setups-to-other-server
 
-docker cp /var/jenkins_home/jobs ./jobs
+docker cp <container>:/var/jenkins_home/jobs ./jobs
 
 FROM <commited-container>
 COPY jobs/* /var/jenkins_home/jobs/
@@ -23,3 +23,20 @@ COPY ./JENKINSHOME /var/jenkins_home/
 USER root 
 RUN chmod -R 777 /var/jenkins_home/ 
 USER jenkins
+
+
+###PLugin
+
+http://<jenkins-url>/script
+
+Jenkins.instance.pluginManager.plugins.each{
+  plugin -> 
+    println ("${plugin.getDisplayName()} (${plugin.getShortName()}): ${plugin.getVersion()}")
+}
+
+
+###########
+
+FROM jenkins
+COPY plugins.txt /usr/share/jenkins/plugins.txt
+RUN /usr/local/bin/plugins.sh /usr/share/jenkins/plugins.txt
