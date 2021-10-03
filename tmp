@@ -1,0 +1,2 @@
+git clone --depth 1 --branch jenkins-docker-packaging-2.235.1 https://github.com/jenkinsci/docker.git
+
