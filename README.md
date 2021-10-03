@@ -2,6 +2,8 @@
 
 python3 -m http.server 8000
 
+--
+docker build -t vikvo11/k8sjenkins .
 
 jenkins
 https://github.com/jenkinsci/docker/blob/master/README.md
@@ -22,3 +24,4 @@ docker container rm e5e0dd0bcfbf -f
 docker run -d -v jenkins_home:/var/jenkins_home -p 8080:8080 -p 50000:50000 vikvo11/k8sjenkins:latest
 
 docker container stop b99c8730f085
+
