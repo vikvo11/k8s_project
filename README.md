@@ -25,3 +25,5 @@ docker run -d -v jenkins_home:/var/jenkins_home -p 8080:8080 -p 50000:50000 vikv
 
 docker container stop b99c8730f085
 
+##RUN 
+https://stackoverflow.com/questions/33887194/how-to-set-multiple-commands-in-one-yaml-file-with-kubernetes
