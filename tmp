@@ -1,3 +1,5 @@
+docker run -u 0 -it -p 8080:8080 -p 50000:50000 vikvo11/k8sjenkins:latest bash
+
 git clone --depth 1 --branch jenkins-docker-packaging-2.235.1 https://github.com/jenkinsci/docker.git
 docker build -t vikvo11/k8sjenkins .
 
