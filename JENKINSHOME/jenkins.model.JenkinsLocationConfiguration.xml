@@ -1,0 +1,4 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<jenkins.model.JenkinsLocationConfiguration>
+  <jenkinsUrl>http://ip172-18-0-18-c5cu53nnjsv0009vm11g-8080.direct.labs.play-with-docker.com/</jenkinsUrl>
+</jenkins.model.JenkinsLocationConfiguration>
