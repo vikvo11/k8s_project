@@ -37,15 +37,18 @@ Jenkins.instance.pluginManager.plugins.each{
     println ("${plugin.getDisplayName()} (${plugin.getShortName()}): ${plugin.getVersion()}")
 }
 
+Jenkins.instance.pluginManager.plugins.each{
+  plugin -> 
+    println ("${plugin.getShortName()}:${plugin.getVersion()}")
+}
 
 ###########
 
-FROM jenkins
-COPY plugins.txt /usr/share/jenkins/plugins.txt
-RUN /usr/local/bin/plugins.sh /usr/share/jenkins/plugins.txt
 
-###
 
 FROM jenkins/jenkins:lts-jdk11
 COPY --chown=jenkins:jenkins plugins.txt /usr/share/jenkins/ref/plugins.txt
 RUN /usr/local/bin/install-plugins.sh < /usr/share/jenkins/ref/plugins.txt
+
+####
+JENKINSHOME/jenkins.model.JenkinsLocationConfiguration.xml
