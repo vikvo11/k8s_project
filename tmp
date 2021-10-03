@@ -6,6 +6,7 @@ docker build -t vikvo11/k8sjenkins .
 #docker run -u 0 -d -p 8080:8080 -p 50000:50000 -v /data/jenkins:/var/jenkins_home jenkins/jenkins:lts
 #docker run -d -p 8080:8080 -p 50000:50000 vikvo11/k8sjenkins:latest
 docker run -u 0 -d -p 8080:8080 -p 50000:50000 vikvo11/k8sjenkins:latest
+docker run -u 0 -it -p 8080:8080 -p 50000:50000 vikvo11/k8sjenkins:latest bash
 
 https://stackoverflow.com/questions/41111976/why-cant-docker-commit-a-jenkins-container-with-customized-configuration
 
